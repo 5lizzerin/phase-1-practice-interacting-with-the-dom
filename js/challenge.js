@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     manualCounter();
     commenter();
+    heartCounter();
 });
 
 function manualCounter() {
@@ -28,5 +29,29 @@ function commenter() {
         commentList.append(userText);
         submitEvent.target.reset();
     })
+}
+
+
+function heartCounter() {
+    const heartButton = document.getElementById("heart");
+    heartButton.addEventListener("click", () => {
+        const counter = document.getElementById("counter");
+        const likeList = document.getElementsByClassName("likes")[0];
+        // let likes = 0;
+        // // const numberOfLikes = likes++;
+        let counterValue = counter.innerText;
+        const likeComment = `${counterValue} has been liked ${clickCounter()} times`;
+        const likeItem = document.createElement("li");
+        likeItem.innerText = likeComment;
+        likeList.append(likeItem);
+        console.log(likeComment);
+    })
+
+    const clickCounter = function () {
+        heartButton.addEventListener("click", () => {
+            let likes = 0;
+            likes++
+            return likes
+        })} 
 }
 
