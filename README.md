@@ -2,6 +2,8 @@
 
 ## Learning Goals
 
+Hello, world
+
 - Create event listeners on DOM nodes using `addEventListener()`
 - Manipulate the DOM in response to events
 
